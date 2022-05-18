@@ -12,10 +12,10 @@
                 "arn:aws:s3:::hari-javahome/*"
             ],
             "Condition": {
-                "StringNotEquals": {
+                "StringNotLike": {
                     "aws:userid": [
                         "AROAVHUE35HIMT6BTH2P5:s3-access-example",
-                        "AROAVHUE35HIMT6BTH2P5:kashvi"
+                        "*kashvi123*"
                     ]
                 }
             }
