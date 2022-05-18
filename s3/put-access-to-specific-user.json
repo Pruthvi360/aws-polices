@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1652860473198",
+    "Statement": [
+        {
+            "Sid": "Stmt1652860463150",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": [
+                "arn:aws:s3:::hari-javahome",
+                "arn:aws:s3:::hari-javahome/*"
+            ],
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:userid": [
+                        "AROAVHUE35HIMT6BTH2P5:s3-access-example",
+                        "AROAVHUE35HIMT6BTH2P5:kashvi"
+                    ]
+                }
+            }
+        }
+    ]
+}
